@@ -9,7 +9,7 @@ wine = load_wine() #Wineデータセットの読み込み
 X, y = wine.data, wine.target
 df_wine = pd.DataFrame(wine.data, columns=wine.feature_names) #DataFrameとして変換する
 
-# データ分割
+#データ分割
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=1, stratify=y
 )
