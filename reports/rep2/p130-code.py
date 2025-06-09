@@ -17,7 +17,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 feat_labels = df_wine.columns[:] #Wineデータセットの特徴量の名称
 
 tree_counts=[10, 50, 500, 1000] #課題条件
-result = [] #結果保存用
 
 for i in tree_counts:
     forest = RandomForestClassifier(n_estimators=i, random_state=1) #ランダムフォレストオブジェクトの作成(決定木の数=500,シード1)
